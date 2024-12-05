@@ -68,4 +68,4 @@ app.post("/ocr", upload.single("image"), async (req, res) => {
     }
 });
 
-server.listen(PORT,()=>console.log(`port: ${PORT}`));
+app.listen(PORT,()=>console.log(`port: ${PORT}`));
