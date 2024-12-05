@@ -7,9 +7,12 @@ const connectDB = require('./handlers/db');
 const vision = require("@google-cloud/vision");
 const multer = require("multer");
 
+const apiKey = process.env.GOOGLE_VISION_API_KEY;
+const key = JSON.parse(apiKey);
+
 // Vision API 클라이언트 초기화
 const client = new vision.ImageAnnotatorClient({
-    keyFilename: "",
+    keyFilename: key,
 });
 
 connectDB();
