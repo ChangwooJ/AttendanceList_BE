@@ -22,7 +22,7 @@ const upload = multer({
 });
 
 const corsOptions = {
-    origin: 'http://localhost:3000', // 클라이언트 도메인
+    origin: 'https://attendance-list-fe.vercel.app/', // 클라이언트 도메인
     credentials: true, // 인증 정보 포함 허용
 };
 app.use(cors(corsOptions));
