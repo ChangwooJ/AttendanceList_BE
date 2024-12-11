@@ -6,6 +6,9 @@ const router = require('./router/routes');
 const connectDB = require('./handlers/db');
 const vision = require("@google-cloud/vision");
 const multer = require("multer");
+require('dotenv').config();
+
+
 
 // Vision API 클라이언트 초기화
 const client = new vision.ImageAnnotatorClient({
@@ -68,4 +71,4 @@ app.post("/ocr", upload.single("image"), async (req, res) => {
     }
 });
 
-app.listen(PORT,()=>console.log(`port: ${PORT}`));
+server.listen(PORT,()=>console.log(`port: ${PORT}`));
